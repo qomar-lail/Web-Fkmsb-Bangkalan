@@ -7,27 +7,46 @@ class app {
 
     public function __construct()
     {
-        $url = $this->parse_url();
-        if(isset($url[0])&&file_exists("../app/controllers/".ucfirst($url[0])."Controller.php")){
-            $this->controller = ucfirst($url[0])."Controller";
-            unset($url[0]);
-        }
-
-        // load Database & model
-        require_once "../app/config/DataBase.php";
-        
+        // data base dan koneksi
         $dbObj = new DataBase();
         $db = $dbObj->getDB();
 
-        //load file controller
-        require_once "../app/core/BaseController.php";
-        require_once "../app/controllers/".$this->controller.".php";
-        $this->controller = new $this->controller($db);
+        $url = $this->parse_url();
+
+        // pilih controller
+        if(isset($url[0]) && ($url[0] === "admin" )){
+            $ControllerName = ucfirst($url[1])."Controller";
+            $ControllerFile = "../app/controllers/admin/".$ControllerName.".php";
+            if(file_exists($ControllerFile)){
+                require_once $ControllerFile;
+                $this->controller = new $ControllerName($db);
+                unset($url[0],$url[1]);
+            }else{
+                die("admin controller tidak ditemukan");
+            }
+        }
+        else{
+            $ControllerName = ucfirst($url[0] ?? 'home')."Controller";
+            $ControllerFile = "../app/controllers/" .$ControllerName. ".php";
+
+            if(file_exists($ControllerFile)){
+                require_once $ControllerFile;
+                $this->controller = new $ControllerName($db);
+                unset($url[0]);
+            }else{
+                die("controller tidak ditemukan");
+            }
+        }
         
         // tentukan method
         if(isset($url[1])&&method_exists($this->controller,$url[1])){
             $this->method = $url[1];
-            unset($url[1]);
+            unset($url[1]); 
+        }else if(isset($url[2]) && method_exists($this->controller,$url[2])){
+            $this->method = $url[2];
+            unset($url[2]);
+        }else{
+            $this->method = "index";
         }
 
         // cek dan ambil parameter

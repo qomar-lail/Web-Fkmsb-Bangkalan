@@ -1,1 +1,1 @@
-<?php
+<h1 class="pt-16">ini halaman about</h1>

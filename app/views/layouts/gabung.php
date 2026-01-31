@@ -15,7 +15,8 @@
             <li><a href="">Karya Tulis</a></li>
         </ul>
     </header>
-    <main>
+    <main class="relative">
+        <?php if(isset($data["notifikasi"])) ?>
         <?= $content ?>
     </main>
 </body>
