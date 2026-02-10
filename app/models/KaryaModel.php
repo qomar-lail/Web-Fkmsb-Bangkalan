@@ -17,7 +17,7 @@ class KaryaModel{
         $stmt = $this->dbcon->prepare("SELECT * FROM karya WHERE id = :id");
         $stmt->execute(
             [
-                ":id" => $id
+                ":id" => $id[0]
             ]
         );
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

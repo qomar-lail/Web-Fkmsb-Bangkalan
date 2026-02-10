@@ -1,10 +1,10 @@
 
-<div class="flex flex-row jutify-batween p-16 pt-13">
-    <div class="w-1/2 flex flex-col justify-center">
+<div class="flex flex-col md:flex-row jutify-batween p-16 pt-13">
+    <div class="md:w-1/2 flex flex-col justify-center">
         <h1 class="text-lg font-semibold text-center">⚠️ Perhatian Sebelum Bergabung</h1>
         <p class="text-sm font-normal text-center">Calon anggota FKMSB diharapkan bersedia menaati AD/ART dan seluruh aturan organisasi, memiliki kesiapan untuk beradaptasi serta menyesuaikan diri dengan kultur FKMSB yang berlandaskan nilai-nilai kepesantrenan, serta menjaga akhlak, etika, dan komitmen selama menjadi bagian dari FKMSB.</p>
     </div>
-    <form action="/PROJECT_FKMSB/public/gabung/" method="POST" class="flex flex-col items-center gap-4 w-1/2 p-6">
+    <form action="/PROJECT_FKMSB/public/gabung/" method="POST" class="flex flex-col items-center gap-4 md:w-1/2 p-6">
         <h1 class="text-xl font-semibold text-blue-600">FORMULIR</h1>
     <!-- Nama -->
         <div class="relative w-2/3">
@@ -109,18 +109,18 @@
         </div>
         <div class="flex justify-center items-center gap-4">
             <a href="/PROJECT_FKMSB/public/" class="inline-flex items-center bg-[#E53835] rounded-full
-                    text-lg font-semibold text-white
+                    text-sm md:text-lg font-semibold text-white
                     py-2 px-6 mt-5">
                 Kembali
             </a>
 
             <button type="submit"
                 class="inline-flex items-center bg-blue-600 rounded-full
-                    text-lg font-semibold text-white
+                    text-sm md:text-lg font-semibold text-white
                     py-2 px-6 mt-5
                     shadow-md hover:bg-blue-700 hover:shadow-lg
                     transition duration-300">
-                Gabung Sekarang
+                Gabung
             </button>
         </div>
 </form>

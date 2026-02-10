@@ -2,16 +2,20 @@
 require_once "../app/models/KaryaModel.php";
 
 class KaryaController extends BaseController{
-    public function index(){
-        $this->view("karya/index");
+    private $model;
+
+    public function __construct($db){
+        $this->model = new KaryaModel($db);
     }
+
+    public function index(){
+        $data["karya"] = $this->model->getAll();
+        $this->view("karya/index",$data);
+    }
+
+    
     public function detail($id){
-        $data = [
-            'judul' => 'Peran Alumni Pesantren dalam Dunia Akademik',
-            'penulis' => 'Ahmad Fauzi',
-            'angkatan' => '2021',
-            'isi' => 'Ini adalah isi lengkap karya ilmiah...'
-        ];
+        $data["karya"] = $this->model->getById($id);
         $this->view("karya/detail",$data);
     }
 }
