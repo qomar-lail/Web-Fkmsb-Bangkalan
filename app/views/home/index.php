@@ -110,7 +110,7 @@
             data-aos="fade-up" data-aos-delay="100">
             <i class="ri-group-line text-[40px] text-blue-600"></i>
             <div class="flex flex-col items-center">
-                <h2 class="text-xl font-semibold">40</h2>
+                <h2 class="text-xl font-semibold">40+</h2>
                 <p>Pengurus</p>
             </div>
         </div>
@@ -119,7 +119,7 @@
             data-aos="fade-up" data-aos-delay="200">
             <i class="ri-draft-line text-[40px] text-blue-600"></i>
             <div class="flex flex-col items-center">
-                <h2 class="text-lg font-semibold">40</h2>
+                <h2 class="text-lg font-semibold">40+</h2>
                 <p>Proker</p>
             </div>
         </div>
@@ -128,7 +128,7 @@
             data-aos="fade-up" data-aos-delay="300">
             <i class="ri-quill-pen-ai-line text-[40px] text-blue-600"></i>
             <div class="flex flex-col items-center">
-                <h2 class="text-lg font-semibold">40</h2>
+                <h2 class="text-lg font-semibold">40+</h2>
                 <p>Karya ilmiah</p>
             </div>
         </div>

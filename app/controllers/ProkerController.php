@@ -15,14 +15,35 @@ class ProkerController extends BaseController{
                 'judul' => 'Vidio Edukasi/Narasi',
                 'divisi' => 'Pengembangan Edukasi Digital',
                 'deskripsi' => 'Melatih kualitas public speaking kader FKMSB sekaligus untuk mengedukasi public dengan basis video short  / narasi.',
-                'tahun' => '1/bulan',
+                'tahun' => '1x/bulan',
                 'status' => 'Aktif'
             ],
             [
                 'judul' => 'Podcast',
                 'divisi' => 'Pengembangan Edukasi Digital',
                 'deskripsi' => 'Edukasi pengelolaan media dan publikasi digital organisasi.',
-                'tahun' => '2025',
+                'tahun' => '1x/2bulan',
+                'status' => 'Aktif'
+            ],
+            [
+                'judul' => 'PAB',
+                'divisi' => 'PSDM',
+                'deskripsi' => 'langkah awal pengkaderan anggota yang baru bergabung',
+                'tahun' => '1x/tahun',
+                'status' => 'Aktif'
+            ],
+            [
+                'judul' => 'Milad FKMSB BANGKALAN',
+                'divisi' => 'PSDM',
+                'deskripsi' => 'Perayaan hari lahir fkmsb bangkalan',
+                'tahun' => '1x/tahun',
+                'status' => 'Aktif'
+            ],
+            [
+                'judul' => 'Santunan anak yatim',
+                'divisi' => 'PSDM',
+                'deskripsi' => 'bentuk dukungan finansial, materiil, dan kasih sayang FKMSB yang diberikan kepada anak-anak ',
+                'tahun' => '1x/tahun',
                 'status' => 'Aktif'
             ],
             [

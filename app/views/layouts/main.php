@@ -11,13 +11,27 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
+<!-- java script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    // animasi
     AOS.init({
         duration: 800,
         once: true
     });
+
+    // toggle
+    function mobileMenu(){
+        const menu = document.getElementById('mobileMenu');
+
+        if(menu.style.display === "none"){
+            menu.style.display = "block";
+        }else{
+            menu.style.display = "none";
+        }
+    }
 </script>
+
 
 <body class="bg-gray-100">
 
@@ -45,7 +59,7 @@
         </ul>
 
         <!-- HAMBURGER MOBILE -->
-        <button id="menuToggle" class="md:hidden text-2xl text-gray-700 me-3">
+        <button id="menuToggle" class="md:hidden text-2xl text-gray-700 me-3" onclick="mobileMenu()">
             <i class="ri-menu-line"></i>
         </button>
     </div>
